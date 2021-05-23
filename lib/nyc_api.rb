@@ -1,6 +1,7 @@
 require 'net/http'
 require 'open-uri'
 require 'json'
+require 'awesome_print'
  
 class GetPrograms
 
@@ -15,4 +16,4 @@ class GetPrograms
 end
 
 programs = GetPrograms.new.get_programs
-puts programs
+ap JSON.parse(programs)
